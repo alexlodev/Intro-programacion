@@ -1,37 +1,38 @@
-############# TIPOS DE DATOS:
-# int es el tipo de dato igual a numero entero 22
-# float es igual a 22.222
-# boolean es igual a verdadero o falso, true o false
-# string es una cadena de texto "Hola mundo 22 + 22".
-
-# Júpiter = 2.55 Venus = 0.87 Urano = 0.99 Marte = 0.38 Mercurio = 0.39 Saturno = 0.93 Neptuno = 1.38 Tierra = 1 Luna = 0.17
-
-####################################################
-############### EJEMPLO ALAMBRADO
-# pesoDeKeylor = 80
-
-# pesoTotalEnLaLuna = pesoDeKeylor * 0.17
-
-# pesoDeKeylorEnLaLuna = "Usted pesa: " + str(pesoTotalEnLaLuna) + "kg en la luna"
-
-# print(pesoDeKeylorEnLaLuna)
 
 
-################ PESO EN LA LUNA: 
-# pesoDelUsuario = input("Por favor ingresa tu peso: ")
-# pesoTotalEnLaLuna = pesoDelUsuario * 0.17
+## Array de datos:
+# opciones = ['Cosa 1', 'Cosa 2', 'Cosa 3' ]
 
-# pesoDelUsuarioEnLaLuna = "Usted pesa: " + str(pesoTotalEnLaLuna) + "kg en la luna"
-# print(pesoDelUsuarioEnLaLuna)
+## Funciones        ## Lo que esta dentro de los parentisis se le llaman parametros
+def nombreDeFuncion(nombre):
+    ## Condicionales
+    ## Comparar datos se utiliza == 
+    if nombre == 'Andres':
+        print('hola ' + nombre)
+    elif nombre == 'Alexis':
+        print('hola ', nombre)
+    else: 
+        print(':v')
 
-################ PESO EN MARTE: 
-
-pesoDelUsuario = input("Por favor ingresa tu peso: ")
-pesoTotalEnLaLuna = pesoDelUsuario * 0.17
-
-pesoDelUsuarioEnLaLuna = "Usted pesa: " + str(pesoTotalEnLaLuna) + "kg en la luna"
-print(pesoDelUsuarioEnLaLuna)
-
-################ PESO EN MARTE: 
+## Invocar funcion:
+# nombreDeFuncion(213)
 
 
+# Tarea: Tratar de entender la siguiente logica:. #
+import enquiries 
+
+planetas = ['Júpiter', 'Venus', 'Urano', 'Marte', 'Mercurio', 'Saturno', 'Neptuno', 'Tierra']
+
+# Dictionary 
+diccionarioPlanetas = {'Júpiter': 2.55 , 'Venus' : 0.87 , 'Urano' : 0.99, 'Marte' : 0.38 , 'Mercurio' : 0.39, 'Saturno' : 0.93, 'Neptuno' : 1.38 , 'Tierra' : 1}
+
+planetaSeleccionado = enquiries.choose(' Escoja el planeta: ', planetas)
+
+pesoDelUsuario = float(input('Ingrese su peso: '))
+
+
+def calcularPeso(planetaSeleccionado, pesoDelUsuario): 
+    print('Usted pesa: ', diccionarioPlanetas[planetaSeleccionado] * pesoDelUsuario , 'en', planetaSeleccionado)
+
+
+calcularPeso(planetaSeleccionado, pesoDelUsuario)
